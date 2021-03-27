@@ -11,11 +11,31 @@
     }
     .container{
         display: grid;
-        
+        grid-template-columns: repeat(4,25%);
+        grid-template-rows: repeat(5,1fr)
+    }
+    .header{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .footer{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 5;
+        grid-row-end: 6;
     }
 </style>
 </head>
-<body>
+<body class="container"> 
+    <div class="header">
+        <a href="https://about.google/">About</a>
+        <a href="https://store.google.com/">Store</a>
+        <a href="https://www.google.com/gmail/about/">Gmail</a>
+        <a href="https://www.google.com/imghp?hl=EN">Images</a>
+        <button id="sign-in">Sign In</button>
+    </div>
     <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
     <form>
         <label>
@@ -23,18 +43,15 @@
         </label>
         <button id="submit">Google Search</button>
         <button id="feeling-lucky">I'm Feeling Lucky</button>
-        <button id="sign-in">Sign In</button>
-        <a href="https://about.google/">About</a>
-        <a href="https://store.google.com/">Store</a>
-        <a href="https://www.google.com/gmail/about/">Gmail</a>
-        <a href="https://www.google.com/imghp?hl=EN">Images</a>
+        
+    </form>
+    <div class="footer">
         <a href="">Advertising</a>
         <a href="">Business</a>
         <a href="">How Search works</a>
-        <a href="">Carbonn neutral since 2007</a>
+        <a href="">Carbon neutral since 2007</a>
         <a href="">Privacy</a>
         <a href="">Terms</a>
         <a href="">Settings</a>
-        
-    </form>
+    </div>
 </body>
